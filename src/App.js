@@ -131,7 +131,7 @@ axios.get('http://localhost:8080/api/teams')
     
     {/*Body of the page */}
       <div className='body' style={teamSelected?{color:secondaryColor,backgroundColor:primaryColor}:{color:'purple',backgroundColor:'white'}}>
-        <Avvvatars style='shape' value='CrissyCris'></Avvvatars>
+    
         {!formOpen && !playerFormOpen && !editTeamFormOpen && teamSelected &&(
           <div>
             <Team key={teamSelectedObject.id} team={teamSelectedObject} players={playerList}/>
