@@ -1,38 +1,263 @@
-.App {
+.title{
+  position: fixed;
+  left: 40%;
+  bottom: 85%;
+  font-size:70px;
+}
+.ball{
+  position: relative;
+  top: 0;
+  right: 15px;
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin-left: auto;
+}
+.navP{
+  position: fixed;
+  font-size:59px;
+  cursor:pointer;
+  float:left;
+  font-family:'cooper black';
+  bottom: 85%;
+}
+.header{
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 87%;
+  position: sticky;
+  font-size:65;
+  font-family:'cooper black';
+  border:black;
+  text-align:center
+}
+.body{
+  top: 9%;
+  left: 0;
+  right: 0;
+  bottom: 7.5%;
+  padding-bottom: 70px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  height:max-content; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+}
+.sidenav p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav p:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav .closebtn:hover{
+  cursor: pointer;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav p {font-size: 18px;}
+}
+.navImages{
+  height: 50px;
+  width: 80px;
+  border-radius: 50%;
+}
+.AddTeamButton{
+position: relative;
+top:70%;
+left:1%;
+height: 50px;
+width: 240px;
+font-size: 20px;
+font-family: 'cooper black';
+border-style:double;
+}
+.AddTeamButton:hover{
+cursor: pointer;
+}
+.AddPlayerButton{
+font-family: 'cooper black';
+font-size: 20px;
+position: fixed;
+top:85%;
+right: 0.5%;
+bottom:10%;
+left: 75%;
+}
+.DeleteTeamButton{
+  font-family: 'cooper black';
+  font-size: 20px;
+  position: fixed;
+  top:78%;
+  right: 0.5%;
+  bottom:17%;
+  left: 75%;
+}
+
+.DeleteTeamButton:hover{
+  cursor: pointer;
+}
+.EditTeamButton{
+  font-family: 'cooper black';
+  font-size: 20px;
+  position: fixed;
+  top:71%;
+  right: 0.5%;
+  bottom:24%;
+  left: 75%;
+}
+.EditTeamButton:hover{
+  cursor: pointer;
+}
+.AddPlayerButton:hover{
+  cursor: pointer;
+}
+.ButtonBorder{
+  top:40%;
+  bottom: 40%;
+  left: 40%;
+  right: 40%;
+  height: 200px;
+  position: fixed;
+  border: 3px solid black;
+}
+.AddButNoTeams{
+position:fixed;
+top: 43%;
+left: 40%;
+right: 55%;
+bottom: 48%;
+width: 382px;
+height: 150px;
+font-size: 50px;
+font-family: 'cooper black';
+font-size: 50px;
+background-color: purple;
+color: white;
+}
+.AddButNoTeams:hover{
+  cursor: pointer;
+}
+.Form{
+  position:fixed;
+  top:20%;
+  bottom: 35%;
+  left: 26%;
+  right: 7%;
+  border-style: double;
+  font-size: 25px;
+ 
+}
+.FormTitle{
   text-align: center;
+  position: relative;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cancelTeamButton{
+  position:relative;
+  text-align: center;
+  font-size: 40px;
+  min-width: 50px;
+  max-width: 640px;
+  max-height: 50px;
+  min-height: 3px;
+  width: 640px;
+  height: 50px;
+  top: 5%;
+  left: 0%;
+  right: 80%;
+  float: left;
+  border-style: double;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cancelTeamButton:hover{
+  cursor:pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subTeamButton{
+  position:relative;
+  text-align: center;
+  font-size: 40px;
+  min-width: 50px;
+  max-width: 640px;
+  max-height: 50px;
+  min-height: 3px;
+  width: 640px;
+  height: 50px;
+  top: 5%;
+  left: 0%;
 }
-
-.App-link {
-  color: #61dafb;
+.cancelPlayerButton{
+  position:relative;
+  text-align: center;
+  font-size: 40px;
+  min-width: 50px;
+  max-width: 640px;
+  max-height: 50px;
+  min-height: 3px;
+  width: 640px;
+  height: 50px;
+  top: 7%;
+  left: 0%;
+  right: 80%;
+  float: left;
+  border-style: double;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cancelPlayerButton:hover{
+  cursor: pointer;
+}
+.subPlayerButton{
+  position:relative;
+  text-align: center;
+  font-size: 40px;
+  min-width: 50px;
+  max-width: 640px;
+  min-height: 3px;
+  width: 640px;
+  height: 50px;
+  top: 15%;
+  left: 0%;
+  float: right;
+}
+.subPlayerButton:hover{
+  cursor: pointer;
+}
+.subTeamButton:hover{
+  cursor: pointer;
+}
+input{
+  border-style: double;
+}
+.story{
+  height: 100px;
+  margin-top: 10px;
+  width: 700px;
+  
+}
+footer{
+  bottom:0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
